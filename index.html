@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Validate Account</title>
+</head>
+<body>
+<script>
+    function validateAccount(str) {
+        regexp = /^[_a-z0-9]{6,}$/;
+        if (regexp.test(str)) {
+            return true;
+        }
+        return false;
+    }
+    console.log(validateAccount('123asdasdbc_'));
+    console.log(validateAccount('_abc123'));
+    console.log(validateAccount('12345'));
+    console.log(validateAccount('abcde'));
+    let account = prompt("Enter the Email: ");
+    console.log(validateAccount(account));
+</script>
+</body>
+</html>
